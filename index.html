@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Análise Num</title>
+</head>
+<body>
+    <header>
+        <h1 >Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Digite um número de 1 a 100
+                <input type="number" name="num" id="num">
+                <input type="button" value="Adicionar" onclick="add()">
+            </p>
+        </div>
+        <div>
+            <p>
+                <textarea name="comentarios" id="txt" rows="10" cols="20" maxlength="500"> </textarea>
+                <input type="button" value="Finalizar" id="fim">
+            </p>
+        </div>
+        <div>
+            <p id="res">Resultado
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Kelvin Morais</p>
+    </footer>
+    <script rel="script" href="script.js"></script>
+</body>
+</html>
