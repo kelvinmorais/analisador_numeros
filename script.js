@@ -43,7 +43,6 @@ function numduplicado(num){
 }
 
 function clickfim(){
-    alert(finish)
    if(finish > 0){
         alert('Reset para poder analisar novos números')
     } else if (finish == 0) {
