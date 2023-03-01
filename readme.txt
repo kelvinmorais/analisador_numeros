@@ -11,9 +11,9 @@ Html
 Funcionalidades
 
 	Adicionar o valor digitado no campo de número na caixa			OK
-		Se não tiver valor digitado, apresentar erro				OK
+		Se não tiver valor digitado, apresentar erro (extra)			OK
 		se o valor digitado naõ estiver de 1 a 100, apresentar erro		OK
-		Se o valor já foi digitado, deve apresentar erro			OK		
+		Se o valor já foi digitado, deve apresentar erro			OK			Se pressionar o botão reset, zerar todos dadso (extra)		OK	
 		
 	ao pressionar botão finalizar, apresentar:
 		contador de números

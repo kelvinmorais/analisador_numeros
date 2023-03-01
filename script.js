@@ -10,7 +10,6 @@ var caixa = []
 function clickadd(){
     let numdom = window.document.querySelector("input#num")    
     num = Number(numdom.value)
- 
 
     if(numdom.value.length == 0){
         alert("[ERRO] É preciso digitar um valor entre 1 e 100!")
