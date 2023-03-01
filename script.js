@@ -72,6 +72,11 @@ function reset(){
     caixadom.innerHTML = ''
     caixa = []
     finish = 0
+    res1.innerHTML = ''
+    res2.innerHTML = ''
+    res3.innerHTML = ''
+    res4.innerHTML = ''
+    res5.innerHTML = ''
 }
 
 function soma(caixa){
