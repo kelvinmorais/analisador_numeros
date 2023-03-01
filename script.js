@@ -1,12 +1,17 @@
 var botaoadd = window.document.querySelector("input#add"), 
     botaof = window.document.querySelector("input#fim"),
     resetdom = document.querySelector("input#reset"),
-    caixadom = window.document.querySelector("textarea#txt")
+    caixadom = window.document.querySelector("textarea#txt"),
+    caixa = [],
+    finish = 0,
+    res1 = document.querySelector("p#res-qtd"),
+    res2 = document.querySelector("p#res-maior"),
+    res3 = document.querySelector("p#res-menor"),
+    res4 = document.querySelector("p#res-soma"),
+    res5 = document.querySelector("p#res-media")
 botaoadd.addEventListener('click', clickadd)
 botaof.addEventListener('click', clickfim)
 resetdom.addEventListener('click', reset)
-var caixa = [],
-    finish = 0
 
 function clickadd(){
     let numdom = window.document.querySelector("input#num")    
@@ -51,12 +56,7 @@ function clickfim(){
         maiorn = caixa[qtdnum-1], //maior valor
         menorn = caixa[0], //menor valor
         //soma = soma(caixa) //soma
-        media = soma(caixa) / qtdnum,
-        res1 = document.querySelector("p#res-qtd"),
-        res2 = document.querySelector("p#res-maior"),
-        res3 = document.querySelector("p#res-menor"),
-        res4 = document.querySelector("p#res-soma"),
-        res5 = document.querySelector("p#res-media")
+        media = soma(caixa) / qtdnum
 
     res1.innerHTML = `Você digitou ${qtdnum} número \n`
     res2.innerHTML = `O maior valor digitado, foi o número ${maiorn} \n`
