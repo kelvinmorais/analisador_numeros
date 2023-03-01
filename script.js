@@ -1,50 +1,52 @@
 var botaoadd = window.document.querySelector("input#add"), 
-    botaof = window.document.querySelector("input#fim")
-botaoadd.addEventListener('click', clickadicionar)
+    botaof = window.document.querySelector("input#fim"),
+    resetdom = document.querySelector("input#reset"),
+    caixadom = window.document.querySelector("textarea#txt")
+botaoadd.addEventListener('click', clickadd)
 botaof.addEventListener('click', clickfim)
+resetdom.addEventListener('click', reset)
+var caixa = []
 
+function clickadd(){
+    let numdom = window.document.querySelector("input#num")    
+    num = Number(numdom.value)
+ 
 
-
-function clickadicionar(){
-    window.document.innerText = 'teste'
-    window.alert('teste')
+    if(numdom.value.length == 0){
+        alert("[ERRO] É preciso digitar um valor entre 1 e 100!")
+    } else if(num < 1 || num > 100){
+        alert("[ERRO] O valor digitado não é valido, deve estar entre 1 e 100!")
+    } else if(caixa.length == 0 ) {  
+        caixa.push(num) 
+        caixadom.innerHTML = ''
+        caixadom.innerHTML += `Você digitou: ${num} \n`
+    } else if(caixa.length > 0 ) { 
+         if(numduplicado(num) != -1 ) { 
+            alert("[ERRO] Este valor já foi digitado. Tente outro número de 1 a 100!")
+        } else if(numduplicado(num) == -1){
+            caixa.push(num)
+            caixadom.innerHTML += `Você digitou: ${num} \n`
+            
+           // for(let ini in caixa){
+                //caixadom.innerHTML += `A posição ${ini} tem o valor ${caixa[ini]} \n`
+       // }
+        }        
+    } 
 }
 
-/*
-function clickadicionar(){
-    console.log('testes')
-    var numdom = window.document.querySelector("input#num"),
-        caixadom = window.document.querySelector("textarea#txt")
-        num = Number(numdom)
-        caixa = []
-    
-    if(numdom.length == 0){
-        console.log("[ERRO] É preciso digitar um valor entre 1 e 100!")
-    } else if(num < 1 || num > 100){
-        console.log("[ERRO] O valor digitado não é valido, deve estar entre 1 e 100!")
-    } else if(num - analisarcaixa(num) == num ) {  
-        caixa.push(num) //Adiciona no indice da caixa um valor
-        caixadom.innerText = `Você digitou: ${num}`
-    } else {
-        console.log("[ERRO] Este valor já foi digitado. Tente outro número de 1 a 100!")
-    }
+function numduplicado(num){
 
-
-function analisarcaixa(num){
-    for(let c = 0 ; c < arrayb.length ; c++){
-        var validador = 0
-        if(num == arrayb[c]){
-            validador++
-        }
+    for(let ini in caixa){
+        validador = caixa.indexOf(num)
     } 
     return validador 
 }
 
-
-}
-
 function clickfim(){
-    let res = window.document.querySelector("p#res") 
-
+    window.alert('Ola3')
 }
-*/
+
+function reset(){
+    caixadom.innerHTML = ''
+    caixa = []
+}
