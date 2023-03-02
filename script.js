@@ -51,18 +51,18 @@ function clickfim(){
    if(finish > 0){
         alert('Reset para poder analisar novos números')
     } else if (finish == 0) {
-        caixa.sort() //ordenador
+        caixa.sort(compararNumeros) //ordenador
     let qtdnum = caixa.length, //contador de número
         maiorn = caixa[qtdnum-1], //maior valor
         menorn = caixa[0], //menor valor
-        //soma = soma(caixa) //soma
-        media = soma(caixa) / qtdnum
+        soma2 = soma(caixa) //soma
+        media = soma2 / qtdnum
 
     res1.innerHTML = `Você digitou ${qtdnum} número \n`
     res2.innerHTML = `O maior valor digitado, foi o número ${maiorn} \n`
     res3.innerHTML = `O menor valor digitado, foi o número ${menorn} \n`
-    res4.innerHTML = `A soma dos valores digitados é : ${soma(caixa)} \n`
-    res5.innerHTML = `A média dos valores digitados é: ${media} \n`
+    res4.innerHTML = `A soma dos valores digitados é : ${soma2} \n`
+    res5.innerHTML = `A média dos valores digitados é: ${media.toFixed(2)} \n`
     finish++
     }
     
@@ -85,3 +85,6 @@ function soma(caixa){
         soma+=caixa[ini]
     } return soma
 }
+
+function compararNumeros(a, b) { 
+     return a - b}
